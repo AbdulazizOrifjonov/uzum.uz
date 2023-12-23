@@ -1,0 +1,92 @@
+.EILTS{
+    position: relative;
+    width: 234px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+    border-radius: 8px;
+    background-color: #31b731;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.EILTS:hover{
+    box-shadow: 0 5px 10px #0001;
+
+}
+.img{
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 20px;
+    background-color: #a1a2a1;
+    border-radius: 5px;
+}
+.h3{
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break: break-all;
+    background-color: #a1a2a1;
+    border-radius: 5px;
+    width: 90%;
+    height: 30px;
+
+}
+.aksiya{
+
+    width: 100px;
+    height: 20px;
+    background-color: #a1a2a1;
+    border-radius: 5px;
+}
+
+.eski{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding-bottom: 7px;
+}
+.uf{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.som{
+    width: 80px;
+    height: 20px;
+    background-color: #a1a2a1;
+    border-radius: 5px;
+}
+.kami{
+    width: 120px;
+    height: 25px;
+    background-color: #a1a2a1;
+    border-radius: 5px;
+}
+.when{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40%;
+    padding-top: 7px;
+}
+.savat{
+    width: 30px;
+    height: 30px;
+    background-color: #a1a2a1;
+    border-radius: 5px;
+}
+.bodey{
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column; */
+    gap: 10px;
+    padding: 0 10px 7px ;
+}
