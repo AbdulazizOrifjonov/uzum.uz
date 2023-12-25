@@ -393,7 +393,7 @@ hr {
     @media screen and (max-width: 750px) {
         .medyas {
 
-            display: block;
+            display: block;}
             .containera{
                padding-bottom: 50px;
                display: flex;
@@ -402,7 +402,6 @@ hr {
             }
            
          
-        }
         .foooter {
            display: flex;
            align-items: center;

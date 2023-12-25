@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Routes, Route } from 'react-router-dom';
 import SubHeader from './components/sub-header/SubHeader';
 import Navbar from './components/navbar/Navbar';
@@ -34,20 +34,22 @@ import Now from './Now/Now';
 import Snowfall from 'react-snowfall'
 import Admin from './router/admin/Admin';
 import Auth from './router/auth/Auth';
-import nav from "./assets/nav.gif"
 import "./App.css"
+import Archa from './components/archa/Archa';
 function App() {
+
+
+
   return (
     <div className="App">
       <SubHeader />
-      <div className="container">
-
-      <img className='uzum' src={nav} alt="" />
-      </div>
+        
+      <Archa/>
    
       <Navbar data={PRODUCTS} />
       <NavbarBottom />
       <Routes>
+     
         <Route path='/' element={<Home data={PRODUCTS} />} />
         <Route path='login' element={<Login />} />
         <Route path='wishes' element={<Wishes />} />
@@ -101,9 +103,16 @@ function App() {
 export default App;
  
 
+ 
+// import React from 'react'
 
+// function App() {
+//     return (
+//      <div className="">e</div>   
+//     )
+// }
 
-
+// export default App
 
 
 //  import React from 'react'
@@ -120,11 +129,110 @@ export default App;
 //  export default App
  
 
+// import * as React from 'react';
+// import AspectRatio from '@mui/joy/AspectRatio';
+// import Stack from '@mui/joy/Stack';
+// import Button from '@mui/joy/Button';
+// import Card from '@mui/joy/Card';
+// import CardContent from '@mui/joy/CardContent';
+// import Skeleton from '@mui/joy/Skeleton';
+// import Typography from '@mui/joy/Typography';
+
+// export default function AnimationSkeleton() {
+//   return (
+//     <Stack spacing={2} useFlexGap>
+//       <Card variant="outlined" sx={{ width: 343 }}>
+//         <CardContent orientation="horizontal">
+//           <Skeleton animation="wave" variant="circular" width={48} height={48} />
+//           <div>
+//             <Skeleton animation="wave" variant="text" sx={{ width: 120 }} />
+//             <Skeleton
+//               animation="wave"
+//               variant="text"
+//               level="body-sm"
+//               sx={{ width: 200 }}
+//             />
+//           </div>
+//         </CardContent>
+//         <AspectRatio ratio="21/9">
+//           <Skeleton animation="wave" variant="overlay">
+//             <img
+//               alt=""
+//               src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+//             />
+//           </Skeleton>
+//         </AspectRatio>
+//         <Typography sx={{ overflow: 'hidden' }}>
+//           <Skeleton animation="wave">
+//             Lorem ipsum is placeholder text commonly used in the graphic, print, and
+//             publishing industries.
+//           </Skeleton>
+//         </Typography>
+//         <Button>
+//           Read more
+//           <Skeleton animation="wave" />
+//         </Button>
+//       </Card>
+//     </Stack>
+//   );
+// }
 
 
+// import * as React from 'react';
+// // import AspectRatio from '@mui/joy/AspectRatio';
+// import Card from '@mui/joy/Card';
+// import Skeleton from '@mui/joy/Skeleton';
+// import Typography from '@mui/joy/Typography';
+// import Box from '@mui/joy/Box';
+// import "./App.css"
+// const BasicSkeleton = () => {
+//   return (
+//     <div>
+//       <Card
+//       className="card"
+//       //  variant="outlined" style={{ width: 343, display: 'flex', gap: 2 }}
+//       >
+//         {/* <AspectRatio
+//          className="ras"
+//         //  ratio="21/9"
+//         >
+//           <Skeleton 
+//           className="ras"
+//           //  variant="overlay"
+//            >
+          
+//           </Skeleton>
+//         </AspectRatio> */}
+//         <div className="foyz">
 
+//         <Typography>
+//         <Skeleton variant="rectangular" width={220} height="16em" sx={{ mb: 1 }} />
 
+//         </Typography>
+//         <Typography>
+//           <Skeleton >
+//            jncdnhjec c ejk ckjdeocls,ekdcn ed c
+//           </Skeleton>
+//         </Typography>
+//         <Skeleton variant="rectangular" width={120} height="1.4em" />
 
+//       <Box className="box" 
+//       // sx={{ width: 343, m: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2 }}
+//       >
+//         <div className='gap'>
+//           <Skeleton variant="rectangular" width={100} height="1em" />
+//           <Skeleton variant="rectangular" width={140} height="1em" sx={{ mb: 1 }} />
+//         </div>
+//         <Skeleton variant="circular" width={48} height={48} />
+//       </Box>
+
+//       </div>
+//       </Card>
+//     </div>
+//   );
+// };
+
+// export default BasicSkeleton;
 
 
 

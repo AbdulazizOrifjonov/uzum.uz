@@ -20,7 +20,7 @@ import "./NavbarBottom.css"
 // import uy from "../../router/Web/uy/uy.png"  
 // import hayvon from "../../router/Web/hayvon/hayvon.png"  
 // import araq from "../../router/Web/araq/araq.png"  
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 // import Kitoblar from '../../router/Web/Kitoblar/Kitoblar';
 // const DATA = [
 //     "Ektronika",
@@ -39,6 +39,11 @@ import { Link } from 'react-router-dom';
 //   return <></>;
 // }
 function NavbarBottom() {
+  const location = useLocation();
+  if (location.pathname.includes('login') || location.pathname.includes('admin')) {
+    return <></>;
+  }
+
   return (
     <div className='container'>
       <div className="slesh">
@@ -58,7 +63,7 @@ function NavbarBottom() {
         <Link className="gold" to={'/Elektronika'} >                 <div className="turkumlardir"><div className='johan'>       <p className='joha' >                          Elektronika                                     </p> </div>      </div>                        </Link>
         <Link className="gold" to={'/Maishiy'} >                 <div className="turkumlardir"><div className='johan'>     <p className='joha' >                          Maishiy ehnika                                      </p> </div>      </div>                      </Link>
         <Link className="gold" to={'/Kiyim'} >                 <div className="turkumlardir"><div className='johan'>   <p className='joha' >                          Kiyim                                     </p> </div>      </div>                                  </Link>
-        <Link className="gold" to={'/Poyabzallar'} >                 <div className="turkumlardir"><div className='johan'>     <p className='joha' >                          Poyabrallar                                     </p> </div>      </div>                          </Link>
+        <Link className="gold" to={'/Poyabzallar'} >                 <div className="turkumlardir"><div className='johan'>     <p className='joha' >                          Poyabzallar                                     </p> </div>      </div>                          </Link>
         <Link className="gold" to={'/Aksessuarlar'} >                 <div className="turkumlardir"><div className='johan'>   <p className='joha' >                          Aksessuarlar                                     </p> </div>      </div>                           </Link>
         <Link className="gold" to={'/Gozallik'} >                 <div className="turkumlardir"><div className='johan'>               <p className='joha' >                          Goʻzallik va parvarish                                     </p> </div>      </div>     </Link>
         <Link className="gold" to={'/Salomatlik'} >                 <div className="turkumlardir"><div className='johan'>        <p className='joha' >                          Salomatlik                                     </p> </div>      </div>                        </Link>

@@ -7,6 +7,10 @@ function Admin() {
     return (
         <div className='admin'>
         <div className="admin__sidebar">
+
+          <NavLink  className='link' to={"/"}>
+            home
+          </NavLink>
           <h2>Admin - Private Route</h2>
           <h3>Authentication</h3>
           <div className="admin_link">

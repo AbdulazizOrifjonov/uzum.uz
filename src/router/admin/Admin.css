@@ -9,6 +9,9 @@
     background: var(--bg-py);
     padding: 24px;
     color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .admin__content {
@@ -19,9 +22,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-gap: 20PX;    
+    gap: 20PX;
 }
-.link{
+
+.link {
     width: 150px;
     height: 40px;
     background-color: #0400ff;

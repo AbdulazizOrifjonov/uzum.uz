@@ -46,3 +46,27 @@ border-top-left-radius: 9px;
 background-color: #e6dddd;
 color: var(--bg-py);
 }
+.none{
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .none{
+        display: block;
+    }
+    .bloc{
+        display: none;
+    }
+    .katagorya{
+        width: 100%;
+        height: auto;
+      
+        border: none;
+    }
+    .katagorya{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30%;
+    }
+}

@@ -13,6 +13,17 @@
 .sub__header-title{
     color: #777;
 }
+.a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.c{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 @media screen and (max-width:990px){
     .sub__header-title{

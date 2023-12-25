@@ -1,4 +1,4 @@
-import React from "react";
+import React, {  useState }   from "react";
 import "./Products.css";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -8,11 +8,15 @@ import { TbShoppingBagPlus } from "react-icons/tb";
 import { incCart } from "../../context/cartSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useState } from "react";
+
  
 const  AMOUNT = 5
 
-function Products({ data }) {
+function Products({ data, admin }) {
+ 
+ 
+
+
   const [count ,  setCount] = useState(1)
   const wishes = useSelector((s) => s.wishes.value);
   const dispatch = useDispatch();
@@ -24,16 +28,18 @@ const notify = () => {
  
 }
   return (
-    <>
+    <div className="">
+       
+       
+    <div>
     <div className="products__wrapper">
  
+             
+
       {data?.slice(0, count*AMOUNT).map((el) => (
-    
-        
         <div key={el.id} className="products__card">
           <Link to={ `/product/${el.id}`} className="products__image">
             <img src={el.url} alt="" />
-        
           </Link>
           <div className="products__body">
             <p className="products__title">{el.title }</p>
@@ -42,25 +48,40 @@ const notify = () => {
                 {(el.price * 1.5 / 12)?.brm()  } so'm/oyiga
               </span>
             </div>
-            <del>{(el.price * 1.2)?.brm()} so'm</del>
-            <p className="products__price">{el.price?.brm()} so'm</p>
+            <del  id="fonts">{(el.price * 1.2)?.brm()} so'm</del>
+            <p id="font" className="products__price">{el.price?.brm()} so'm</p>
           </div>
+          {
+            admin ? 
+            <div className="">
+
+            </div>
+            :
           <div
             onClick={() => dispatch(toggleWishes(el))}
             className="products__wishes"
-          >
+            >
             {wishes?.some((item) => item.id === el.id) ? (
               <FaHeart style={{ color: "var(--bg-py)" }} />
-            ) : (
+              ) : (
               <FaRegHeart />
               )}
           </div>
+          }
+          {
+            admin ? 
+            <div  className="products__cart">
+              🗑
+            </div>
+            :
           <div
             onClick={() => dispatch(incCart(el))}
             className="products__cart"
             >
-            <button className="products__carts" onClick={ e => notify()}>            <TbShoppingBagPlus />
-</button>
+            <button className="products__carts"
+             onClick={ e => notify()}>      
+                  <TbShoppingBagPlus />
+               </button>
             <ToastContainer
             position="top-center"
             autoClose={1333}
@@ -74,301 +95,36 @@ const notify = () => {
             theme="light"
             />
           </div>
+          }
         </div>
+
+
+
+
+
       ))}
     </div>
     {
       data.length > count*AMOUNT ? 
+      <div className="hurmacha">
 
-      <button className='nok' onClick={()=> setCount( p => p+5)}>  <h1 className="font">Yana ko'rsatish</h1></button>
-
-      : <></>
-    }
-      </>
+      <button className='nok'
+      onClick={()=> setCount( p => p+5)}> 
+       
+        <h1 className="font">Yana ko'rsatish</h1>
+        </button>
+      </div>
+: <></>
+}
+      </div>
+</div>
   );
 }
-
 export default Products;
 
  
 
-
-
-
-
-
-
-
-
-
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

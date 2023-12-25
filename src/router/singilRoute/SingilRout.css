@@ -1,3 +1,6 @@
+/* *{
+    color: #595959;
+} */
 .singil {
     display: flex;
     justify-content: space-between;
@@ -14,7 +17,9 @@
     position: absolute;
 
 }
-
+#rang{
+    color: rgb(255, 0, 0);
+}
 
 .singil_route {
     width: 500px;
@@ -319,4 +324,77 @@ justify-content: center;
 .btns{
 z-index: 1;
 position: relative;
+}
+
+@media screen and (max-width: 1250px) {
+.singil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: none;
+    gap: 40px;
+
+}
+.singil_route{
+    position: relative;
+    display: flex;
+    /* flex-direction: column; */
+    border: none;
+
+}
+ .singil_route_in{
+/* border: none; */
+width: 100%;
+ }
+ .put{
+    width: 300px;
+    /* padding: 5px 0; */
+    font-size: 14px;
+    height: 30px;
+ }
+ 
+ .aka{
+    display: flex;
+ }
+ .oxshadi{
+    width: 100%;
+
+ }
+}
+@media screen and (max-width: 620px){
+.banners{
+    font-size: 14px;
+}
+.banner{
+    font-size: 14px;
+
+}
+.luk{
+    display: flex;
+    gap: 30px;
+}
+.singil_route{
+    display: none;
+}
+}
+@media screen and (max-width: 520px){
+.put{
+width: 350px;
+height: 30px;
+}
+.banners{
+   display: flex;
+   text-align: center;
+   align-items: center;
+
+}
+.oxshadi{
+  display: none;
+}
+}
+@media screen and (max-width: 400px){
+    .banners{
+        display: none;
+    }
 }

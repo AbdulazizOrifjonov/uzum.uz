@@ -17,7 +17,7 @@ import rasim3 from "./img/google-play.png"
 import rasim4 from "./img/instagram.png"
 import rasim5 from "./img/telegram.png"
 import rasim6 from "./img/youtube.png"
-
+import { useLocation } from 'react-router-dom';
 import "./Footer.css";
 
 
@@ -27,6 +27,10 @@ import "./Footer.css";
  
 
 function Footer() {   
+  const location = useLocation();
+  if (location.pathname.includes('login') || location.pathname.includes('admin')) {
+    return <></>;
+  }
   return (
     <div className="container">
 

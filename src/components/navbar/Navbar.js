@@ -1,19 +1,16 @@
-
 import React, { useState, useEffect } from 'react';
-import { IoSearch, IoCartOutline, IoHomeOutline } from "react-icons/io5";
-import { NavLink } from 'react-router-dom';
-import { FaRegUser, FaRegHeart } from "react-icons/fa";
-import { TfiMenuAlt } from "react-icons/tfi";
-import "./Navbar.css";
+import { IoSearch, IoCartOutline, IoHomeOutline } from 'react-icons/io5';
+import { NavLink, useLocation } from 'react-router-dom';
+import { FaRegUser, FaRegHeart } from 'react-icons/fa';
+import { TfiMenuAlt } from 'react-icons/tfi';
+import './Navbar.css';
 import { useSelector } from 'react-redux';
 
 function Navbar({ data }) {
-  // const { pathname } = useLocation()
+  const location = useLocation();
   const [value, setValue] = useState('');
   const [searchData, setSearchData] = useState([]);
-  // if (pathname.includes("login") || pathname.includes("admin")) {
-  //   return <></>;
-  // }
+
   useEffect(() => {
     if (value.trim()) {
       let filteredData = data.filter((item) =>
@@ -28,50 +25,55 @@ function Navbar({ data }) {
   const wishes = useSelector((state) => state.wishes.value);
   const cart = useSelector((state) => state.cart.value);
 
+  if (location.pathname.includes('login') || location.pathname.includes('admin')) {
+    return <></>;
+  }
+
   return (
-    <div className='container'>
-      <div className='navbar'>
-        <h2 className='nav__logo'>
+    <div className="container">
+      <div className="navbar">
+        <h2 className="nav__logo">
           <NavLink to={'/'}>uzum market</NavLink>
         </h2>
-        <NavLink to={"/turkum"}>
-          <button className='nav__category'>
+        <NavLink to={'/turkum'}>
+          <button className="nav__category">
             <TfiMenuAlt />
             <span>Katalog</span>
           </button>
         </NavLink>
-        <div className='nav__search'>
+        <div className="nav__search">
           <input
-            className='imput'
+            className="imput"
             value={value}
-            placeholder='Maxsulotlar va turkumlar izlash'
+            placeholder="Maxsulotlar va turkumlar izlash"
             onChange={(e) => setValue(e.target.value)}
-            type='text'
+            type="text"
           />
           <button>
             <IoSearch />
           </button>
           {value.trim() && (
-            <div className='nav__search-drop'>
+            <div className="nav__search-drop">
               {searchData.slice(0, 5).map((item) => (
                 <NavLink
                   to={`/product/${item.id}`}
                   onClick={() => setValue('')}
-                  key={item.id} className='nav__search-item'
+                  key={item.id}
+                  className="nav__search-item"
                 >
-                  <img className='images' src={item.url} alt='' />
-                  <div className=''>
+                  <img className="images" src={item.url} alt="" />
+                  <div className="">
                     <p>{item.title}</p>
                     <b>{item.price?.brm()} so'm</b>
                   </div>
                 </NavLink>
               ))}
               {!searchData.length && (
-                <div className='center'>
+                <div className="center">
                   <img
-                    className='noUndefoend'
-                    src='https://uzum.uz/static/img/penguin.a739ac8.png'
-                    alt=''
+                    className="noUndefoend"
+                    src="https://uzum.uz/static/img/penguin.a739ac8.png"
+                    alt=""
                   />
                   <p>Malumot yo'q</p>
                 </div>
@@ -79,32 +81,31 @@ function Navbar({ data }) {
             </div>
           )}
         </div>
-        <ul className='nav__collection'>
+        <ul className="nav__collection">
           <li className="nav__item nav__home">
-            <NavLink to={"/"}>
+            <NavLink to={'/'}>
               <IoHomeOutline />
               <span>Asosiy sahifa</span>
             </NavLink>
           </li>
-          <li className='nav__item'>
-            <NavLink to={'/admin'}>
+          <li className="nav__item">
+            <NavLink to={'/admin/Create-Prodact'}>
               <FaRegUser />
               <span>Kirish</span>
             </NavLink>
           </li>
-          <li className='nav__item'>
+          <li className="nav__item">
             <NavLink to={'/wishes'}>
               <FaRegHeart />
               <span>Sevimlilar</span>
-              <sup className='cat'>{wishes.length}</sup>
+              <sup className="cat">{wishes.length}</sup>
             </NavLink>
           </li>
-          <li className='nav__item'>
+          <li className="nav__item">
             <NavLink to={'/cart'}>
-
               <IoCartOutline />
               <span>Savat</span>
-              <sup className='cat'>{cart.length}</sup>
+              <sup className="cat">{cart.length}</sup>
             </NavLink>
           </li>
         </ul>

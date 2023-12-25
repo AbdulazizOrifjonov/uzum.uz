@@ -3,11 +3,13 @@ import "./CartProducts.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { incCart, decCart, removeCart, removeAllCart } from '../../context/cartSlice';
 import { useDispatch } from 'react-redux';
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
+// import PhoneInput from 'react-phone-number-input';
+// import 'react-phone-number-input/style.css';
 import { NavLink } from 'react-router-dom';
+// import Uzbekistan from "../../assets/uzbekistan.png"
 
 function CartProducts({ data }) {
+  // const ras = Uzbekistan
   const BOT_TOKEN = "6833124360:AAH8znokgWLw8i8whkLtPLJzMGhxZm9eQYQ";
   const CHAT_ID = "-4012230912";
 
@@ -20,7 +22,6 @@ function CartProducts({ data }) {
   const handleSubmit = (e) => {
     e.preventDefault();
  
-
     let order = " <b>Buyurtmachi:</b> %0A"
     order += ` <b>Ismi:</b> ${fullName} %0A`
     order += ` <b>Telefon:</b> %2B ${tel} %0A`
@@ -84,7 +85,8 @@ function CartProducts({ data }) {
           <div className="logn__input">
             <form className="logn__input" onSubmit={handleSubmit}>
               <input required value={fullName} onChange={(e) => setFullName(e.target.value)} className="toldir" type="text" placeholder="To'liq ismingiz" />
-              <PhoneInput defaultCountry="UZ" value={tel} onChange={setTel} className="toldir" />
+              {/* <PhoneInput defaultCountry="UZ" value={tel} onChange={setTel} className="toldir" /> */}
+              <input defaultCountry="UZ" value={tel} onChange={setTel} className="toldir" />
               <input required value={addRes} onChange={(e) => setAddRes(e.target.value)} className="toldir" type="text" placeholder='Manzilingiz' />
               <input required value={message} onChange={(e) => setMessage(e.target.value)} className="toldir" type="text" placeholder="Habar yo'llash" />
               <div className="narx">
