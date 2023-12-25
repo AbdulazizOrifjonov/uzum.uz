@@ -5,25 +5,9 @@
     justify-content: center;
     width: 250px;
     height: auto;
-        gap: 2px;
-        /* padding: 0  20px 0 0; */
-        border-right: 1px solid rgb(173, 173, 173)
-}
-.gold {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: auto;
-        gap: 2px;
-        /* padding: 0  20px 0 0; 
-         border-right: 1px solid rgb(173, 173, 173) */
-}
-.johan{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: 2px;
+    padding: 0  20px 0 0;
+    border-right: 1px solid rgb(173, 173, 173)
 }
 
 .turkumlar {
@@ -41,6 +25,20 @@ border-top-left-radius: 9px;
     color: #5a5a5a;
     cursor: pointer;
 }
+.gov {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: auto;
+        gap: 2px;
+}
+.johan{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .turkumlar:hover{
 background-color: #e6dddd;
@@ -49,7 +47,7 @@ color: var(--bg-py);
 .none{
     display: none;
 }
-
+ 
 @media screen and (max-width:1000px) {
     .none{
         display: block;
@@ -67,6 +65,14 @@ color: var(--bg-py);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 30%;
+        width: 100%;
+        height: auto;
+    }
+    .gov{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }

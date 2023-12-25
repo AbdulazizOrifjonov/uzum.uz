@@ -102,17 +102,45 @@ function App() {
 
 export default App;
  
-
  
-// import React from 'react'
 
-// function App() {
-//     return (
-//      <div className="">e</div>   
-//     )
-// }
 
-// export default App
+// import React from 'react';
+// import Card from '@mui/joy/Card';
+// import Skeleton from '@mui/joy/Skeleton';
+// import Typography from '@mui/joy/Typography';
+// import Box from '@mui/joy/Box';
+// import "./App.css"
+// const BasicSkeleton = () => {
+//   return (
+//     <div>
+      // <Card className="card">
+      //   <div className="foyz">
+      //   <Typography>
+      //   <Skeleton variant="rectangular" width={220} height="16em" sx={{ mb: 1 }} />
+      //   </Typography>
+      //   <div variant="rectangular" width={220} height="1.2em" className="padding"/>
+      //   <Typography>
+      //     <Skeleton variant="rectangular" width={220} height="1.8em" className="padding"/>
+      //   </Typography>
+      //   <div variant="rectangular" width={220} height="1.2em" className="padding"/>
+      //   <Skeleton variant="rectangular" width={120} height="1.4em" />
+      //   <div variant="rectangular" width={220} height="1.2em" className="padding"/>
+      // <Box className="box" 
+      // >
+      //   <div className='gap'>
+      //     <Skeleton variant="rectangular" width={100} height="1em" />
+      //     <Skeleton variant="rectangular" width={140} height="1em" sx={{ mb: 1 }} />
+      //   </div>
+      //   <Skeleton variant="circular" width={48} height={48} />
+      // </Box>
+      // </div>
+      // </Card>
+//     </div>
+//   );
+// };
+
+// export default BasicSkeleton;
 
 
 //  import React from 'react'
@@ -178,61 +206,6 @@ export default App;
 // }
 
 
-// import * as React from 'react';
-// // import AspectRatio from '@mui/joy/AspectRatio';
-// import Card from '@mui/joy/Card';
-// import Skeleton from '@mui/joy/Skeleton';
-// import Typography from '@mui/joy/Typography';
-// import Box from '@mui/joy/Box';
-// import "./App.css"
-// const BasicSkeleton = () => {
-//   return (
-//     <div>
-//       <Card
-//       className="card"
-//       //  variant="outlined" style={{ width: 343, display: 'flex', gap: 2 }}
-//       >
-//         {/* <AspectRatio
-//          className="ras"
-//         //  ratio="21/9"
-//         >
-//           <Skeleton 
-//           className="ras"
-//           //  variant="overlay"
-//            >
-          
-//           </Skeleton>
-//         </AspectRatio> */}
-//         <div className="foyz">
-
-//         <Typography>
-//         <Skeleton variant="rectangular" width={220} height="16em" sx={{ mb: 1 }} />
-
-//         </Typography>
-//         <Typography>
-//           <Skeleton >
-//            jncdnhjec c ejk ckjdeocls,ekdcn ed c
-//           </Skeleton>
-//         </Typography>
-//         <Skeleton variant="rectangular" width={120} height="1.4em" />
-
-//       <Box className="box" 
-//       // sx={{ width: 343, m: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2 }}
-//       >
-//         <div className='gap'>
-//           <Skeleton variant="rectangular" width={100} height="1em" />
-//           <Skeleton variant="rectangular" width={140} height="1em" sx={{ mb: 1 }} />
-//         </div>
-//         <Skeleton variant="circular" width={48} height={48} />
-//       </Box>
-
-//       </div>
-//       </Card>
-//     </div>
-//   );
-// };
-
-// export default BasicSkeleton;
 
 
 

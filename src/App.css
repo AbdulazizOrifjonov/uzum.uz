@@ -1,85 +1,19 @@
-.colorred{
-    width: 20px;
-    height: 20px;
-    background-color: #ff0000;
-}
-.colorgren{
-    width: 20px;
-    height: 20px;
-    background-color: #00ff00;
-}
-.colorblue{
-    width: 20px;
-    height: 20px;
-    background-color: #0000ff;
-}
-.colorpink{
-    width: 20px;
-    height: 20px;
-    background-color: #ff00df;
-}
-.contact{
-    width: 100%;
-    height: auto;
-}
-
-.contact {
-    display: flex;
-  }
-  
-  .colorred {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    margin-right: 10px;
-  }
-  
-  .colorgreen {
-    width: 50px;
-    height: 50px;
-    background-color: green;
-    margin-right: 10px;
-  }
-  
-  .colorblue {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    margin-right: 10px;
-  }
-  
-  .colorpink {
-    width: 50px;
-    height: 50px;
-    background-color: pink;
-  }
-
-
-
-.ras{
-  width: 240px;
-  height: 400px;
-}
- 
-
-.gap{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.col{
+.acol {
   background-color: #6b3232;
 }
-.card{
+
+.acard {
   width: 255px;
-  height: 450px;
+  height: 440px;
+
 
 }
-.create__product-input{
+
+.acreate__product-input {
   background-color: #ffffff;
 }
-.foyz{
+
+.afoyz {
   width: 100%;
   height: auto;
   display: flex;
@@ -90,7 +24,7 @@
 
 
 
-.box{
+.abox {
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
@@ -102,4 +36,6 @@
 
 
 
- 
+.apadding {
+  padding-bottom: 10px;
+}

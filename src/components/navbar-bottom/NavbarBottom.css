@@ -72,5 +72,23 @@ color: var(--bg-py);
   .slesh{
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px; 
   }
- 
+ @media screen and (max-width: 1000px) {
+  .navbar__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slesh{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gold{
+    width: 100%;
+    height: auto;
+  }
+ }
